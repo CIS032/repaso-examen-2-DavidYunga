@@ -37,16 +37,17 @@ public class Circulo extends FiguraGeometrica{
         this.radio = radio;
     }
 
-    @Override
-    public void mover(double dx, double dy) {
-        this.centro.mover(dx, dy);
+     @Override
+    public void mover(int dx, int dy) {
+        this.centro.setX(this.centro.getX() + dx);
+        this.centro.setY(this.centro.getY() + dy);
     }
 
-    
     @Override
     public String toString() {
-        return "(" + centro + ")";
+        return "Circulo: " + nombre + ", centro: " + centro + ", radio: "+radio;
     }
+    
     
     
 }
